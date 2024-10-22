@@ -4,7 +4,7 @@
 #include <time.h>
 
 /* DISCLAIMER
-   To test the power of the algorithm we can change the k value at line 859 from 10000 to 5 or 0.
+   To test the power of the algorithm we can change the k value at line 863 from 10000 to 5 or 0.
    To open the menu press Q.
    Press B to use the bomb after 2000 points are achieved.
    Navigate from arrows.
