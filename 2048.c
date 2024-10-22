@@ -4,15 +4,12 @@
 #include <time.h>
 
 /* DISCLAIMER
-  -pentru incadrarea propice a jocului in terminal nu este
-   recomandat ca acesta sa fie zoomat prea mult
-  -chiar daca bomba ar trebui sa se activeze dupa 2000 de puncte,
-   pentru usurinta verificarilor am pus un target de doar 100 puncte
-  -pentru verificarea ecranului de castig se poate modifica pe 
-   linia 453 valoarea de 2048 in una mai usor de atins
-  -de fun se poate modifica valoarea pe care trebuie sa o atinga k
-   intr-una mai mica (sa zicem 5 sau 0 spre exemplu) pentru a pune 
-   algoritmul in actiune pe linia 866*/
+   To test the power of the algorithm we can change the k value at line 859 from 10000 to 5 or 0.
+   To open the menu press Q.
+   Press B to use the bomb after 2000 points are achieved.
+   Navigate from arrows.
+   The comments are written in Romanian.
+*/
 
 /* Aceasta functie introduce primele
    doua elemente random la inceputul jocului*/
@@ -1131,7 +1128,7 @@ int main() {
         /* daca tasta B este apasata si scorul a depasit 2000 de puncte
            se va activa o bomba care elimina toate celulele cu valorile 2 sau 4,
            dar aceasta se poate ultiliza o singura data per joc*/
-        if (ch == 'b' && ok_bomb && score >= 100) {
+        if (ch == 'b' && ok_bomb && score >= 2000) {
             for (i = 0; i < 4; i++) {
                 for (j = 0; j < 4; j++) {
                     if (m[i][j] == 2 || m[i][j] == 4) {
